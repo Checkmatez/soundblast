@@ -1,1 +1,1 @@
-[Demo here](https://github.com/checkmatez.github.io)
+[Demo here](https://checkmatez.github.io/sound-blast/)
