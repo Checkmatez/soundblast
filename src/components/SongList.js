@@ -9,7 +9,6 @@ import { getSongsInPlaylist, getUsers, getCurrentSong } from '../reducers';
 
 const DivContainer = styled.div`
   background-color: #f4f4f4;
-  height: calc(100vh - 50px);
   padding-bottom: 43px;
 `;
 
@@ -30,7 +29,7 @@ class SongList extends Component {
     users: PropTypes.object.isRequired,
     currentSongId: PropTypes.number,
     isPlaying: PropTypes.bool.isRequired,
-    dispatch: PropTypes.func.isRequired,
+    dispatch: PropTypes.func.isRequired
   };
 
   componentDidMount() {
@@ -71,7 +70,7 @@ const mapStateToProps = (state, { params }) => ({
   songsInPlaylist: getSongsInPlaylist(state, params.categories),
   users: getUsers(state),
   currentSongId: getCurrentSong(state).id,
-  isPlaying: state.player.isPlaying,
+  isPlaying: state.player.isPlaying
 });
 
 export default connect(mapStateToProps)(SongList);
